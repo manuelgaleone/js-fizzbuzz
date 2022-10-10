@@ -10,3 +10,37 @@ main {
     background-color: #1E504F;
     height: 100vh;
 }
+
+/* FizzBuzz Boxes */
+.fizzBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1170px;
+    margin: 20px auto;
+}
+
+.fizzBoxes .contaBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 1rem;
+    
+}
+
+.contaBox {
+    background-color: #1589b2;
+}
+
+.fizz {
+    background-color: #0cd6a1;
+}
+
+.buzz {
+    background-color: #ffd266;
+}
+
+.fizzBuzz {
+    background-color: #f0466f;
+}

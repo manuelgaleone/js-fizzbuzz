@@ -1,10 +1,10 @@
 /*
 
-Scrivi un programma che stampi in console conto numeri da 1 a 100:
+Scrivi un programma che stampi in console i numeri da 1 a 100:
 
-- Per conto multipli di 3 stampi “Fizz” al posto del numero.
-- Per conto multipli di 5 stampi “Buzz”.
-- Per conto numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
+- Per i multipli di 3 stampi “Fizz” al posto del numero.
+- Per i multipli di 5 stampi “Buzz”.
+- Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
 
     BONUS 1:
     Crea un container nel DOM , aggiungendo (attraverso la funzione append()) un elemento html con il numero o la stringa corretta da mostrare.
@@ -16,20 +16,20 @@ Scrivi un programma che stampi in console conto numeri da 1 a 100:
 
 
 //Funzione ciclica di Conta
-let conto;
-for (let conto = 1; conto <= 100; conto++) {
+const fizzBoxes = document.querySelector('.fizzBoxes');
+for (let i = 1; i <= 100; i++) {
 
         //Multiplo di 3
-    if (conto % 3 === 0) {
-      console.log("Fizz")
+    if (i % 3 === 0) {
+      fizzBoxes.innerHTML += `<div class="contaBox contaBox-${i} fizz">fizz</div>`;
         //Multiplo di 5
-    } else if (conto % 5 === 0) {
-      console.log("Buzz")
+    } else if (i % 5 === 0) {
+      fizzBoxes.innerHTML += `<div class="contaBox contaBox-${i} buzz">buzz</div>`;
         //Multiplo di 3 e 5
-    } else if (conto % 3 === 0 && conto % 5 === 0) {
-        console.log("FizzBuzz")
+    } else if (i % 3 === 0 && i % 5 === 0) {
+      fizzBoxes.innerHTML += `<div class="contaBox contaBox-${i} fizzBuzz">fizzBuzz</div>`;
       } else {
-      console.log(conto) 
+      fizzBoxes.innerHTML += `<div class="contaBox contaBox-${i} contaBox">${i}</div>`;
     }
 
   }
