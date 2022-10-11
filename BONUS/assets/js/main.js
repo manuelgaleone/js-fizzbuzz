@@ -20,15 +20,15 @@ const fizzBoxes = document.querySelector('.fizzBoxes');
 for (let i = 1; i <= 100; i++) {
 
         //Multiplo di 3
-    if (i % 3 === 0) {
+      if (i % 3 === 0 && i % 5 === 0) {
+      fizzBoxes.innerHTML += `<div class="contaBox contaBox-${i} fizzBuzz">fizzBuzz</div>`;
+      } else if (i % 3 === 0) {
       fizzBoxes.innerHTML += `<div class="contaBox contaBox-${i} fizz">fizz</div>`;
         //Multiplo di 5
     } else if (i % 5 === 0) {
       fizzBoxes.innerHTML += `<div class="contaBox contaBox-${i} buzz">buzz</div>`;
         //Multiplo di 3 e 5
-    } else if (i % 3 === 0 && i % 5 === 0) {
-      fizzBoxes.innerHTML += `<div class="contaBox contaBox-${i} fizzBuzz">fizzBuzz</div>`;
-      } else {
+    } else {
       fizzBoxes.innerHTML += `<div class="contaBox contaBox-${i} contaBox">${i}</div>`;
     }
 
